@@ -1,0 +1,5 @@
+@mixin hex($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}

@@ -1,0 +1,68 @@
+%hexagon {
+  .hexagon {
+  	width: 100px;
+  	height: 55px;
+  	background: #fff;
+  	position: relative;
+  }
+  .hexagon:before {
+  	content: "";
+    @include hex(-25px, 0px);
+  	width: 0;
+  	height: 0;
+  	border-left: 50px solid transparent;
+  	border-right: 50px solid transparent;
+  	border-bottom: 25px solid #fff;
+  }
+  .hexagon:after {
+  	content: "";
+  	position: absolute;
+    bottom: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 25px solid #fff;
+  }
+}
+
+// .half-hex {
+//   margin-top: 40px;
+//   width: 100px;
+//   height: 25px;
+//   background: #fff;
+//   position: absolute;
+//   top: 220px;
+//   left: -28px;
+//   z-index: 1;
+//   transform: rotate(90deg);
+//   background: red;
+// }
+// .half-hex:before {
+//   content: "";
+//   @include hex(-25px, 0px);
+//   width: 0;
+//   height: 0;
+//   border-left: 50px solid transparent;
+//   border-right: 50px solid transparent;
+//   border-bottom: 25px solid red;
+// }
+
+// @-webkit-keyframes half-hex {
+//
+// }
+
+
+
+// .half-hex:after {
+//   content: "";
+//   position: absolute;
+//   bottom: -25px;
+//   left: 0;
+//   width: 0;
+//   height: 0;
+//   border-left: 50px solid transparent;
+//   border-right: 50px solid transparent;
+//   border-top: 25px solid #fff;
+// }
