@@ -1,9 +1,9 @@
-.container1 .hex .hexagon, .container2 .hex .hexagon, .container3 .hex .hexagon {
+.container:nth-child(odd) .hex .hexagon, .container:nth-child(even) .hex .hexagon {
   width: 100px;
   height: 55px;
   background: #fff;
   position: relative; }
-.container1 .hex .hexagon:before, .container2 .hex .hexagon:before, .container3 .hex .hexagon:before {
+.container:nth-child(odd) .hex .hexagon:before, .container:nth-child(even) .hex .hexagon:before {
   content: "";
   position: absolute;
   top: -25px;
@@ -13,7 +13,7 @@
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   border-bottom: 25px solid #fff; }
-.container1 .hex .hexagon:after, .container2 .hex .hexagon:after, .container3 .hex .hexagon:after {
+.container:nth-child(odd) .hex .hexagon:after, .container:nth-child(even) .hex .hexagon:after {
   content: "";
   position: absolute;
   bottom: -25px;
@@ -24,31 +24,25 @@
   border-right: 50px solid transparent;
   border-top: 25px solid #fff; }
 
+.container:nth-child(odd) {
+  display: flex;
+  flex-direction: column; }
+  .container:nth-child(odd) .hex {
+    margin-top: 120px;
+    margin-left: -45px; }
+
+.container:nth-child(even) {
+  display: flex;
+  flex-direction: column;
+  margin-top: -90px;
+  margin-left: -50px; }
+  .container:nth-child(even) .hex {
+    margin-top: 121px; }
+
 * {
   background-color: #000; }
 
 .body {
   display: flex; }
-
-.container1 {
-  display: flex;
-  flex-direction: column; }
-  .container1 .hex {
-    margin-top: 120px; }
-
-.container2 {
-  display: flex;
-  flex-direction: column;
-  margin-top: -90px;
-  margin-left: -50px; }
-  .container2 .hex {
-    margin-top: 121px; }
-
-.container3 {
-  display: flex;
-  flex-direction: column; }
-  .container3 .hex {
-    margin-top: 120px;
-    margin-left: -45px; }
 
 /*# sourceMappingURL=application.css.map */

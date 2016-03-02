@@ -27,42 +27,26 @@
   }
 }
 
-// .half-hex {
-//   margin-top: 40px;
-//   width: 100px;
-//   height: 25px;
-//   background: #fff;
-//   position: absolute;
-//   top: 220px;
-//   left: -28px;
-//   z-index: 1;
-//   transform: rotate(90deg);
-//   background: red;
-// }
-// .half-hex:before {
-//   content: "";
-//   @include hex(-25px, 0px);
-//   width: 0;
-//   height: 0;
-//   border-left: 50px solid transparent;
-//   border-right: 50px solid transparent;
-//   border-bottom: 25px solid red;
-// }
+%hexColumnOdd {
+  display: flex;
+  flex-direction: column;
+  .hex {
+    @extend %hexagon;
+    // margin-right: 10px;
+    margin-top: 120px;
+    margin-left: -45px;
+  }
+}
 
-// @-webkit-keyframes half-hex {
-//
-// }
-
-
-
-// .half-hex:after {
-//   content: "";
-//   position: absolute;
-//   bottom: -25px;
-//   left: 0;
-//   width: 0;
-//   height: 0;
-//   border-left: 50px solid transparent;
-//   border-right: 50px solid transparent;
-//   border-top: 25px solid #fff;
-// }
+%hexColumnEven {
+  display: flex;
+  flex-direction: column;
+  // border: 1px solid red;
+  margin-top: -90px;
+  margin-left: -50px;
+  .hex {
+    @extend %hexagon;
+    // margin-right: 10px;
+    margin-top: 121px;
+  }
+}
