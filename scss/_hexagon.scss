@@ -1,9 +1,33 @@
 * {
-  background-color: #000;
 }
+
+body {
+  background: linear-gradient(270deg, #098296, #deeaec, #df9d41);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+
+  @-webkit-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+}
+
+
+
+
+
 
 .body {
   display: flex;
+  height: 2000px;
 }
 
 .container {
@@ -15,4 +39,41 @@
   &:nth-child(even) {
     @extend %hexColumnEven;
   }
+}
+
+$s: 10px;
+$n: 32;
+$t: 5s;
+
+
+
+.hexagon {
+  position: relative;
+  flex-grow: 1;
+  margin: $s * .05;
+  border-radius: $s * .1;
+  animation: scale $t infinite alternate-reverse;
+}
+
+@for $i from 1 through $n {
+  @for $j from 1 through $n {
+    $x: $i + $j - 1;
+    $d: $t / $n * ($i + $j);
+    $x: $x % 8 + 1;
+    .container:nth-child(#{$i})
+    .hexagon:nth-child(#{$j})
+    {
+      // background-color: nth($c, $x);
+      color: nth($c, $x);
+    }
+
+    .container:nth-last-child(#{$i})
+    .hexagon:nth-last-child(#{$j}) {
+      animation-delay: $d * -1;
+    }
+  }
+}
+
+@keyframes scale {
+  to { transform: scale(.2); }
 }

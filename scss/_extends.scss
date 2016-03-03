@@ -2,28 +2,28 @@
   .hexagon {
   	width: 100px;
   	height: 55px;
-  	background: #fff;
+  	background: $c;
   	position: relative;
   }
   .hexagon:before {
-  	content: "";
+    content: "";
     @include hex(-25px, 0px);
-  	width: 0;
-  	height: 0;
-  	border-left: 50px solid transparent;
-  	border-right: 50px solid transparent;
-  	border-bottom: 25px solid #fff;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid $color-hex;
   }
   .hexagon:after {
-  	content: "";
-  	position: absolute;
+    content: "";
+    position: absolute;
     bottom: -25px;
     left: 0;
     width: 0;
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-top: 25px solid #fff;
+    border-top: 25px solid $color-hex;
   }
 }
 
@@ -43,7 +43,7 @@
   flex-direction: column;
   // border: 1px solid red;
   margin-top: -90px;
-  margin-left: -50px;
+  margin-left: -45px;
   .hex {
     @extend %hexagon;
     // margin-right: 10px;
