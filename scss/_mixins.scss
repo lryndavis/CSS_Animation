@@ -3,3 +3,8 @@
   top: $top;
   left: $left;
 }
+
+@mixin columnPlacement($margin, $padding) {
+  margin-top: $margin;
+  margin-left: $padding;
+}

@@ -20,17 +20,12 @@ body {
   }
 }
 
-
-
-
-
-
 .body {
   display: flex;
-  height: 2000px;
 }
 
 .container {
+  height: 100px;
   &:nth-child(odd) {
     @extend %hexColumnOdd;
   }
@@ -40,12 +35,6 @@ body {
     @extend %hexColumnEven;
   }
 }
-
-$s: 10px;
-$n: 32;
-$t: 5s;
-
-
 
 .hexagon {
   position: relative;
@@ -59,11 +48,10 @@ $t: 5s;
   @for $j from 1 through $n {
     $x: $i + $j - 1;
     $d: $t / $n * ($i + $j);
-    $x: $x % 8 + 1;
+    $x: $x % 0 + 1;
     .container:nth-child(#{$i})
     .hexagon:nth-child(#{$j})
     {
-      // background-color: nth($c, $x);
       color: nth($c, $x);
     }
 

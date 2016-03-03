@@ -1,7 +1,6 @@
 .container:nth-child(odd) .hex .hexagon, .container:nth-child(even) .hex .hexagon {
   width: 100px;
   height: 55px;
-  background: #612E8D, #1674BC, #00A396, #81C540, #F5B52E, #ED5B35, #EA225E, #C22286;
   position: relative; }
 .container:nth-child(odd) .hex .hexagon:before, .container:nth-child(even) .hex .hexagon:before {
   content: "";
@@ -59,8 +58,10 @@ body {
   100% {
     background-position: 0% 50%; } }
 .body {
-  display: flex;
-  height: 2000px; }
+  display: flex; }
+
+.container {
+  height: 100px; }
 
 .hexagon {
   position: relative;
